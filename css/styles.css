@@ -103,17 +103,6 @@ a {
   color: var(--mainBlack);
   box-shadow: var(--red-shadow);
 }
-/* button primary */
-.btn-primary {
-  background: var(--primaryColorWhite);
-  color: var(--mainBlack);
-  border-color: var(--primaryColorWhite);
-}
-.btn-primary:hover {
-  background: transparent;
-  color: var(--primaryColorWhite);
-  box-shadow: var(--red-shadow);
-}
 /* section */
 .section {
   padding: 5rem 0;
@@ -125,20 +114,8 @@ a {
   font-size: 2rem;
   letter-spacing: 0.5rem;
 }
-.fa-adjust{
+.fa-adjust {
   position: relative;
-  animation: rotatingIcon infinite linear  10s;
-}
-@keyframes rotatingIcon {
-  0%{
-    transform: rotate(0deg);
-    transition: var(--mainTransition);
-  }100%{
-    transform: rotate(360deg);
-    transition: var(--mainTransition);
-    color: red;
-
-  }
 }
 
 /* section center */
@@ -170,7 +147,7 @@ a {
   .tour-card:not(:first-child) {
     margin-left: -1rem;
   }
-  .tour-card:active{
+  .tour-card:active {
     transform: scale(1.05);
   }
 }
@@ -227,69 +204,6 @@ a {
   }
 }
 
-/*************** end of gallery **********************/
-/*************** deals **********************/
-.input-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 80vw;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-}
-.form-control {
-  flex: 1 1 auto;
-}
-.form-control,
-.btn-submit {
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 300;
-  letter-spacing: var(--mainSpacing);
-  background: var(--offBlack);
-  color: var(--primaryColorWhite);
-  text-transform: uppercase;
-  outline: none;
-  border-radius: 0.4rem;
-  border: 2px solid var(--primaryColorWhite);
-}
-::-webkit-input-placeholder {
-  font-family: "Lato", sans-serif;
-  color: var(--mainBlack);
-}
-:-ms-input-placeholder {
-  font-family: "Lato", sans-serif;
-  color: var(--primaryColorWhite);
-}
-::-ms-input-placeholder {
-  font-family: "Lato", sans-serif;
-  color: var(--primaryColorWhite);
-}
-::-moz-placeholder {
-  font-family: "Lato", sans-serif;
-  color: var(--primaryColorWhite);
-  font-style: italic;
-}
-::placeholder {
-  font-family: "Lato", sans-serif;
-  color: var(--primaryColorWhite);
-  font-style: italic;
-}
-.btn-submit {
-  border-left: none;
-  cursor: pointer;
-  border: 2px solid var(--primaryColorWhite);
-  transition: var(--mainTransition);
-}
-.btn-submit:hover {
-  color: var(--offBlack);
-  background: var(--primaryColorWhite);
-}
-/*************** end of deals **********************/
 /*************** footer **********************/
 .footer {
   background: var(--offBlack);
@@ -374,9 +288,8 @@ a {
 }
 .nav-link:hover {
   color: var(--primaryColorWhite);
-  background: var(--colorRed);
+  background: black;
   padding-left: 2.5rem;
-  font-style: italic;
 }
 /* 271.43 */
 .nav-links {
@@ -394,6 +307,7 @@ a {
   .nav-links {
     display: flex;
     height: auto;
+    position: relative;
   }
 
   .nav-center {
@@ -409,11 +323,18 @@ a {
     padding: 0;
   }
   .nav-link {
-    padding: 0;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5));
   }
   .nav-link:hover {
-    padding: 0;
-    background: transparent;
+    padding: 0.5rem;
+    background: linear-gradient(
+      rgba(119, 117, 117, 0.5),
+      rgba(133, 129, 129, 0.5)
+    );
     color: var(--colorRed);
   }
   .navbar {
