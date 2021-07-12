@@ -127,6 +127,7 @@ a {
   max-width: 1170px;
 }
 
+
 /*************** featured **********************/
 .featured {
   background: var(--mainBlackk);
@@ -158,6 +159,15 @@ a {
 
 .tour-img-container {
   position: relative;
+}
+.tour-img{
+  object-fit: cover;
+}
+.all-img{
+  width: 328.99px;
+  height: 230.98px;
+  object-fit: cover;
+
 }
 .tour-date {
   position: absolute;
