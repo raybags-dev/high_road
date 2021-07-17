@@ -187,11 +187,11 @@ a {
   border-radius: 0.4rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  width: 50%;
+  width: 51%;
   z-index: 10;
   transition: 2s linear;
-  -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
 }
 .tour-card::after {
   content: "";
@@ -202,11 +202,11 @@ a {
   border-radius: 0.4rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  width: 50%;
+  width: 51%;
   z-index: 10;
   transition: 3s;
-  -webkit-backdrop-filter: blur(100px);
-  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
 }
 
 .tour-card:hover .tour-img {
