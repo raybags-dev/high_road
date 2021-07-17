@@ -127,8 +127,10 @@ a {
   max-width: 1170px;
 }
 
-
 /*************** featured **********************/
+.featured-center {
+  position: relative;
+}
 .featured {
   background: var(--mainBlackk);
 }
@@ -138,6 +140,10 @@ a {
   transition: var(--mainTransition);
   box-shadow: var(--card-shadow);
   opacity: 0;
+  padding: 0.4rem;
+  min-height: 30rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 2px 2px 20px rgb(26, 25, 25);
 }
 .tour-card:hover {
   box-shadow: var(--shadow-dark_2);
@@ -160,15 +166,58 @@ a {
 .tour-img-container {
   position: relative;
 }
-.tour-img{
+.tour-img {
+  -o-object-fit: cover;
   object-fit: cover;
+  width: 100%;
+  border-radius: 0.5rem;
+  min-height: 15rem;
+  transition: var(--mainTransition);
+  max-height: 230.98px !important;
+  box-shadow: var(--shadow-dark_2);
 }
-.all-img{
-  width: 328.99px;
-  height: 230.98px;
-  object-fit: cover;
 
+/* before element */
+.tour-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.4rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 50%;
+  z-index: 10;
+  transition: 2s linear;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
 }
+.tour-card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.4rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 50%;
+  z-index: 10;
+  transition: 3s;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+}
+
+.tour-card:hover .tour-img {
+  transition: var(--mainTransition);
+}
+.tour-card:hover::before,
+.tour-card:hover::after {
+  width: 0%;
+  transition: var(--mainTransition);
+}
+
 .tour-date {
   position: absolute;
   top: 0;
@@ -178,6 +227,11 @@ a {
   padding: 0.25rem 0.5rem;
 }
 .tour-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 55%;
   padding: 1.2rem 1.5rem;
 }
 .tour-title {
