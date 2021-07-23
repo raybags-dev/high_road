@@ -140,6 +140,7 @@ a {
   transition: var(--mainTransition);
   box-shadow: var(--card-shadow);
   opacity: 0;
+  overflow: hidden;
   padding: 0.4rem;
   min-height: 30rem;
   border-radius: 0.5rem;
@@ -177,46 +178,15 @@ a {
   box-shadow: var(--shadow-dark_2);
 }
 
-/* before element */
-.tour-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0.4rem;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  width: 51%;
-  z-index: 10;
-  transition: 2s linear;
-  -webkit-backdrop-filter: blur(200px);
-  backdrop-filter: blur(200px);
+.tour-card:hover .tour-img {
+  transform: scale(1.089);
 }
-.tour-card::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 0.4rem;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  width: 51%;
-  z-index: 10;
-  transition: 3s;
-  -webkit-backdrop-filter: blur(200px);
-  backdrop-filter: blur(200px);
-}
+
 
 .tour-card:hover .tour-img {
   transition: var(--mainTransition);
 }
-.tour-card:hover::before,
-.tour-card:hover::after {
-  width: 0%;
-  transition: var(--mainTransition);
-}
+
 
 .tour-date {
   position: absolute;
@@ -288,22 +258,35 @@ a {
   flex-wrap: wrap;
 }
 .footer-link {
+  position: relative;
   color: var(--mainBlackk);
   text-transform: capitalize;
   font-size: 1.1rem;
   margin-right: 1rem;
   padding: 0.4rem;
   background: transparent;
-  box-shadow: var(--red-shadow);
   border-radius: 0.4rem;
-  -webkit-backdrop-filter: var(--blur-effect);
-  backdrop-filter: var(--blur-effect);
+  font-style: italic;
   letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+.footer-link::before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  height: 5%;
+  width: 0%;
+  background: red;
   transition: var(--mainTransition);
 }
 .footer-link:hover {
   color: var(--colorRed);
-  box-shadow: var(--shadow-dark_2);
+}
+.footer-link:hover::before {
+  width: 100%;
+  left: 0;
+  transition: var(--mainTransition);
 }
 .footer-icon {
   font-size: 1.9rem;
@@ -316,8 +299,10 @@ a {
   transform: translateY(-10%);
 }
 .copyright {
-  text-transform: capitalize;
+  text-transform: lowercase;
   letter-spacing: var(--mainSpacing);
+  font-weight: 700;
+  opacity: 0.8;
 }
 /*************** end of footer **********************/
 /*************** navbar **********************/
