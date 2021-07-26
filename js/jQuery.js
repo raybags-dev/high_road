@@ -12,4 +12,10 @@ $(document).ready(function () {
         opacity: "1",
       });
   });
+
+  $(".tour-card").each(function(index, card){
+    $(card).attr({
+      draggable: true
+    })
+  })
 });
