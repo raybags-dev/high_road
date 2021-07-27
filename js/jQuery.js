@@ -1,9 +1,9 @@
 "use strict";
 
+import { pageUnavailable } from "./mentenance_page.js";
+
 $(document).ready(function () {
   console.log("jQuery loaded");
-
-  $(".project-links");
 
   $(".tour-card").each((index, card) => {
     $(card)
@@ -12,10 +12,6 @@ $(document).ready(function () {
         opacity: "1",
       });
   });
+  pageUnavailable();
 
-  $(".tour-card").each(function(index, card){
-    $(card).attr({
-      draggable: true
-    })
-  })
 });
