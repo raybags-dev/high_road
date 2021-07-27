@@ -104,6 +104,9 @@ p {
 a {
   text-decoration: none;
 }
+.hide {
+  display: none;
+}
 /* more global styles */
 /* buttons */
 .btn-white,
@@ -235,7 +238,7 @@ a {
   font-family: var(--roboto);
   line-height: 1.4rem;
   background: rgba(47, 47, 47, 0.1);
-  
+
   left: 0;
   overflow: auto;
   height: 0%;
@@ -279,8 +282,8 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.tour-details{
-  opacity: .5;
+.tour-details {
+  opacity: 0.5;
 }
 .tour-details a {
   position: absolute;
@@ -311,7 +314,7 @@ a {
   font-size: 1.7rem;
   border-radius: 0.3rem;
   z-index: 1;
-  opacity: .5;
+  opacity: 0.5;
   transition: var(--mainTransition);
   color: var(--primaryColorWhite);
   background: hsl(0, 100%, 50%, 0.4);
@@ -331,13 +334,12 @@ a {
   opacity: 1;
 }
 
-.tour-details:hover{
+.tour-details:hover {
   opacity: 1;
 }
 .tour-details a:hover {
   color: var(--colorRed);
   background: rgba(80, 79, 79, 0.8);
-
 }
 .tour-country {
   align-self: center;
@@ -914,4 +916,103 @@ a {
 .tour-card:hover .details-expand-1 {
   top: 100%;
   transition: 0.5s;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+  width: 50px;
+  height: 50px;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  border-radius: 0.4rem;
+  z-index: 100;
+  opacity: 0;
+  display: grid;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 1.4rem;
+  font-family: var(--roboto);
+  font-weight: 900;
+  place-content: center;
+}
+.to-top .to-top-arrow {
+  color: red;
+  -webkit-animation: move-arrow-top infinite forwards 3s;
+  animation: move-arrow-top infinite forwards 3s;
+}
+@-webkit-keyframes move-arrow-top {
+  0% {
+    transform: translateY(40%);
+  }
+  10% {
+    transform: translateY(-40%);
+  }
+  20% {
+    transform: translateY(-40%);
+  }
+  30% {
+    transform: translateY(-40%);
+  }
+  40% {
+    transform: translateY(-40%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  60% {
+    transform: translateY(-40%);
+  }
+  70% {
+    transform: translateY(-40%);
+  }
+  80% {
+    transform: translateY(40%);
+  }
+  90% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(40%);
+  }
+}
+@keyframes move-arrow-top {
+  0% {
+    transform: translateY(40%);
+  }
+  10% {
+    transform: translateY(-40%);
+  }
+  20% {
+    transform: translateY(-40%);
+  }
+  30% {
+    transform: translateY(-40%);
+  }
+  40% {
+    transform: translateY(-40%);
+  }
+  50% {
+    transform: translateY(-40%);
+  }
+  60% {
+    transform: translateY(-40%);
+  }
+  70% {
+    transform: translateY(-40%);
+  }
+  80% {
+    transform: translateY(40%);
+  }
+  90% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(40%);
+  }
+}
+.to-top:hover .to-top-arrow {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
 }
