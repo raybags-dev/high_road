@@ -34,6 +34,7 @@
 }
 /* body */
 body {
+  position: relative;
   font-family: "Lato", sans-serif;
   color: var(--mainGrey);
   background: var(--mainBlack);
@@ -43,6 +44,9 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)),
+    url("https://github.com/raybags-web-dev/image_base/blob/master/images/void.jpeg?raw=true")
+      center/cover no-repeat fixed !important;
 }
 /*************** global styles **********************/
 /* scroll track and bar styles */
@@ -363,11 +367,24 @@ a {
 
 /*************** footer **********************/
 .footer {
+  position: relative;
   background: var(--offBlack);
   color: var(--mainBlackk);
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.footer video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* opacity: 0.5; */
+  filter: grayscale(50%);
+  object-fit: cover;
 }
 .footer-links,
 .footer-icons {
@@ -378,7 +395,8 @@ a {
 }
 .footer-link {
   position: relative;
-  color: var(--mainBlackk);
+  color: var(--mainBlack);
+  font-weight: 700;
   text-transform: capitalize;
   font-size: 1.1rem;
   margin-right: 1rem;
@@ -408,21 +426,24 @@ a {
   transition: var(--mainTransition);
 }
 .footer-icon {
-  font-size: 1.9rem;
+  font-size: 2rem;
   margin-right: 1rem;
   color: var(--mainBlackk);
   transition: var(--mainTransition);
 }
 .footer-icon:hover {
   color: var(--colorRed);
-  transform: translateY(-10%);
+  transform: translateY(-10%) !important;
 }
 .copyright {
   text-transform: lowercase;
   letter-spacing: var(--mainSpacing);
-  font-weight: 700;
+  font-weight: 900;
+  font-size: 1.3rem;
   opacity: 0.8;
+  color: var(--colorRed);
 }
+
 /*************** end of footer **********************/
 /*************** navbar **********************/
 .navbar {
@@ -543,7 +564,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--offBlack);
+  background: rgba(78, 1, 1, 0.5);
   transition: var(--mainTransition);
   box-shadow: var(--darkShadow);
   z-index: 100;
