@@ -457,14 +457,11 @@ a {
 /*************** footer **********************/
 .footer {
   position: relative;
-  background: var(--offBlack);
   color: var(--primaryColorWhite);
   text-align: center;
   padding-left: 2rem;
   padding-right: 2rem;
-  background: radial-gradient(rgba(3, 29, 0, 0.9), rgb(0, 0, 0, 0.3)),
-    url("https://github.com/raybags-web-dev/image_base/blob/master/images/void.jpeg?raw=true")
-      center/cover no-repeat fixed !important;
+  background: radial-gradient(rgb(0, 0, 0), rgb(0, 0, 0, 0.3));
 }
 @media screen and (max-width: 383px) {
   .footer-links {
