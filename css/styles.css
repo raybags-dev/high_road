@@ -44,8 +44,7 @@ body {
   -ms-user-select: none;
   user-select: none;
   background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)),
-    url("https://github.com/raybags-web-dev/image_base/blob/master/images/sky4.jpeg?raw=true")
-      center/cover no-repeat fixed;
+    url("/images/bg_imgs/bg_sky_xx.jpeg") center/cover no-repeat fixed;
 }
 
 .skeleton-container {
@@ -67,6 +66,7 @@ body {
   left: 0;
   right: 0;
   background: rgba(24, 24, 24, 0.7);
+  animation: changeColor infinite alternate-reverse 1s 2s;
 }
 .skeleton-body {
   position: relative;
@@ -87,6 +87,7 @@ body {
   height: 5%;
   border-radius: 0.5rem;
   background: rgba(24, 24, 24, 0.7);
+  animation: changeColor infinite alternate-reverse 1s 2s;
 }
 .box-wrapper {
   min-width: 100%;
@@ -135,6 +136,15 @@ body {
     height: 100px;
     border-radius: 0.5rem;
     background: rgba(24, 24, 24, 0.7);
+  }
+}
+
+@keyframes changeColor {
+  from {
+    background: rgba(24, 24, 24, 0.2);
+  }
+  to {
+    background: rgba(44, 44, 44, 0.3);
   }
 }
 /*************** global styles **********************/
@@ -266,8 +276,10 @@ a {
   cursor: pointer;
 }
 .tour-card:hover ~ .tour-card {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.5 !important;
+  transform: translateX(0.5rem);
 }
 
 .tour-card {
@@ -689,7 +701,7 @@ a {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transform: translate(-50%, -50%);
-  background: rgba(70, 70, 70, 0.75);
+  background: rgba(0, 0, 0, 0.999);
 }
 
 .main-heading {

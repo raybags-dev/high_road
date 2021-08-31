@@ -4,7 +4,6 @@ import { pageUnavailable } from "./mentenance_page.js";
 
 $(function () {
   console.log("jQuery loaded");
-
   $(".tour-card").each((index, card) => {
     $(card)
       .delay(500 * index)
@@ -18,7 +17,6 @@ $(function () {
   });
 
   // Top icon
-
   const div = $("<div></div>").attr("class", "to-top");
   const top_icon = $("<i></i>").attr({
     class: "fas fa-arrow-up to-top-arrow",
