@@ -4,7 +4,7 @@ import { pageUnavailable } from "./mentenance_page.js";
 
 $(function () {
   console.log("jQuery loaded");
-  $(".tour-card").each((index, card) => {
+  $(".main-card").each((index, card) => {
     $(card)
       .delay(500 * index)
       .animate({

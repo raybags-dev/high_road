@@ -51,6 +51,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.9);
   z-index: 1000;
@@ -117,6 +118,7 @@ body {
   opacity: 0.5;
   border-radius: 0.5rem;
   background: transparent;
+  -webkit-filter: blur(10px);
   filter: blur(10px);
   background: radial-gradient(
     circle,
@@ -124,6 +126,11 @@ body {
     rgba(24, 24, 24, 0.7) 100%
   );
   animation: move-skeleton infinite alternate-reverse 1.5s;
+}
+@-webkit-keyframes move-skeleton {
+  to {
+    left: 110%;
+  }
 }
 @keyframes move-skeleton {
   to {
@@ -136,6 +143,15 @@ body {
     height: 100px;
     border-radius: 0.5rem;
     background: rgba(24, 24, 24, 0.7);
+  }
+}
+
+@-webkit-keyframes changeColor {
+  from {
+    background: rgba(24, 24, 24, 0.2);
+  }
+  to {
+    background: rgba(44, 44, 44, 0.3);
   }
 }
 
@@ -260,7 +276,7 @@ a {
 .featured {
   background: var(--mainBlackk);
 }
-.tour-card {
+.main-card {
   position: relative;
   margin-bottom: 1.7rem;
   transition: var(--mainTransition);
@@ -272,22 +288,22 @@ a {
   border-radius: 0.5rem;
   box-shadow: inset 2px 2px 20px rgb(26, 25, 25);
 }
-.tour-card:hover {
+.main-card:hover {
   cursor: pointer;
 }
-.tour-card:hover ~ .tour-card {
+.main-card:hover ~ .main-card {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: 0.5 !important;
   transform: translateX(0.5rem);
 }
 
-.tour-card {
+.main-card {
   box-shadow: -10px 5px 8px 2px rgb(0, 0, 0);
 }
 
 @media screen and (min-width: 769px) {
-  .tour-card:active {
+  .main-card:active {
     transform: scale(1.05);
   }
 }
@@ -308,11 +324,11 @@ a {
   box-shadow: var(--shadow-dark_2);
 }
 
-.tour-card:hover .tour-img {
+.main-card:hover .tour-img {
   transform: scale(1.01);
 }
 
-.tour-card:hover .tour-img {
+.main-card:hover .tour-img {
   transition: var(--mainTransition);
 }
 
@@ -324,7 +340,7 @@ a {
   text-transform: capitalize;
   padding: 0.25rem 0.5rem;
 }
-.tour-footer {
+.card-item-footer {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -337,7 +353,7 @@ a {
 .tour-title {
   text-transform: capitalize;
 }
-.tour-country {
+.card-item {
   position: absolute;
   color: gray;
   font-family: var(--roboto);
@@ -351,17 +367,17 @@ a {
   margin: auto 0.5rem;
   transition: var(--mainTransition);
 }
-.tour-country::first-line {
+.card-item::first-line {
   text-align: center;
   color: red;
   padding-bottom: 0.5rem;
   font-size: 1.08rem;
 }
 
-.tour-card:hover .tour-country {
+.main-card:hover .card-item {
   height: 48%;
 }
-.tour-country .details-expand {
+.card-item .details-expand {
   position: absolute;
   top: 0;
   right: 1%;
@@ -371,13 +387,13 @@ a {
   transform: rotate(180deg);
   transition: var(--mainTransition);
 }
-.tour-country .details-expand:hover {
+.card-item .details-expand:hover {
   color: var(--primaryColorWhite);
 }
-.tour-country .details-expand:active {
+.card-item .details-expand:active {
   transform: scale(1.089);
 }
-.tour-card:hover .details-expand {
+.main-card:hover .details-expand {
   transform: rotate(0deg);
   color: var(--bg-green);
   transition: var(--mainTransition);
@@ -446,7 +462,7 @@ a {
   color: var(--colorRed);
   background: rgba(80, 79, 79, 0.8);
 }
-.tour-country {
+.card-item {
   align-self: center;
 }
 
@@ -456,12 +472,12 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .tour-card {
+  .main-card {
     flex: 0 0 calc(50% - 1rem);
   }
 }
 @media screen and (min-width: 1170px) {
-  .tour-card {
+  .main-card {
     flex: 0 0 calc(33.3333% - 1rem);
   }
 }
@@ -562,7 +578,8 @@ a {
 /*************** end of footer **********************/
 /*************** navbar **********************/
 .navbar {
-  box-shadow: 1px 8px 9px -5px rgba(0, 0, 0, 0.88);
+  -webkit-box-shadow: inset 18px 44px 32px -30px rgba(0, 0, 0, 0.95);
+  box-shadow: inset 18px 44px 32px -30px rgba(0, 0, 0, 0.95);
 }
 .nav-header {
   padding: 1rem 2rem;
@@ -617,6 +634,7 @@ a {
   }
 
   .nav-center {
+    /* position: relative; */
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
@@ -678,7 +696,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(78, 1, 1, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   transition: var(--mainTransition);
   box-shadow: var(--darkShadow);
   z-index: 100;
@@ -1044,11 +1062,11 @@ a {
   }
 }
 
-.tour-card:hover .details-expand-1 i {
+.main-card:hover .details-expand-1 i {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
-.tour-card:hover .details-expand-1 {
+.main-card:hover .details-expand-1 {
   top: 100%;
   transition: 0.5s;
 }
@@ -1166,4 +1184,17 @@ a {
 .to-top:hover .to-top-arrow {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
+}
+
+/* Particles  */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -199;
+  opacity: 0.5;
 }

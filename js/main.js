@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   const backgroundLinks = [
     "../images/bg_imgs/bg1.jpeg",
     "../images/bg_imgs/bg2.jpeg",
-    "../images/bg_imgs/bg6.jpeg",
+    "../images/bg_imgs/bg_x_poetry.jpeg",
     "../images/bg_imgs/bg4.jpeg",
   ];
 
