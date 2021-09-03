@@ -308,11 +308,11 @@ a {
   }
 }
 
-.tour-img-container {
+.pro-img-container {
   position: relative;
 }
 
-.tour-img {
+.project-img {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
@@ -324,11 +324,11 @@ a {
   box-shadow: var(--shadow-dark_2);
 }
 
-.main-card:hover .tour-img {
+.main-card:hover .project-img {
   transform: scale(1.01);
 }
 
-.main-card:hover .tour-img {
+.main-card:hover .project-img {
   transition: var(--mainTransition);
 }
 
@@ -398,15 +398,15 @@ a {
   color: var(--bg-green);
   transition: var(--mainTransition);
 }
-.tour-info {
+.project-info {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.tour-details {
+.proj-details {
   opacity: 0.5;
 }
-.tour-details a {
+.proj-details a {
   position: absolute;
   line-height: 0.2;
   text-align: center;
@@ -455,10 +455,10 @@ a {
   opacity: 1;
 }
 
-.tour-details:hover {
+.proj-details:hover {
   opacity: 1;
 }
-.tour-details a:hover {
+.proj-details a:hover {
   color: var(--colorRed);
   background: rgba(80, 79, 79, 0.8);
 }
