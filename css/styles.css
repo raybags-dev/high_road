@@ -44,7 +44,7 @@ body {
   -ms-user-select: none;
   user-select: none;
   background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)),
-    url("/images/bg_imgs/bg_sky_xx.jpeg") center/cover no-repeat fixed;
+    url("/images/bg_imgs/bg2.jpeg") center/cover no-repeat fixed;
 }
 
 .skeleton-container {
@@ -974,6 +974,7 @@ a {
 .details-expand-1 i {
   position: relative;
   color: hsl(0, 0%, 100%, 0.5);
+  transition: var(--mainTransition);
   -webkit-animation: direction infinite forwards linear 2s 3s;
   animation: direction infinite forwards linear 2s 3s;
 }
@@ -1065,6 +1066,8 @@ a {
 .main-card:hover .details-expand-1 i {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
+  transform: rotate(-180deg);
+  transition: var(--mainTransition);
 }
 .main-card:hover .details-expand-1 {
   top: 100%;

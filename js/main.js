@@ -9,28 +9,6 @@ const links = document.getElementById("nav-links");
 document.addEventListener("DOMContentLoaded", async (event) => {
   if (event.bubbles == true)
     setTimeout(() => skelton.classList.add("hide"), 2000);
-  // change background images every after 10minutes
-  const backgroundLinks = [
-    "../images/bg_imgs/bg1.jpeg",
-    "../images/bg_imgs/bg2.jpeg",
-    "../images/bg_imgs/bg_x_poetry.jpeg",
-    "../images/bg_imgs/bg4.jpeg",
-  ];
-
-  let links = [],
-    index = 0;
-
-  links[0] = backgroundLinks[0];
-  links[1] = backgroundLinks[1];
-  links[2] = backgroundLinks[1];
-  links[3] = backgroundLinks[2];
-
-  setInterval(() => {
-    index = Math.floor(Math.random() * links.length);
-
-    document.body.style.cssText = `background: url(${backgroundLinks[index]})
-      center/cover no-repeat fixed;`;
-  }, 100000);
 });
 
 // ********* set date ************
