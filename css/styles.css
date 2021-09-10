@@ -44,7 +44,7 @@ body {
   -ms-user-select: none;
   user-select: none;
   background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)),
-    url("/images/bg_imgs/bg2.jpeg") center/cover no-repeat fixed;
+    url("/images/bg_imgs/bg1.jpeg") center/cover no-repeat fixed;
 }
 
 .skeleton-container {
