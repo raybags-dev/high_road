@@ -187,11 +187,14 @@ img:not(.nav-logo) {
   background: rgb(46, 46, 46);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  width: 50px;
+  width: 60px;
+  height: 60px;
   padding: 0.3rem;
-  -webkit-backdrop-filter: blur(100px) grayscale(100%);
-  backdrop-filter: blur(100px) grayscale(100%);
+  background: linear-gradient(45deg, red, blue);
   border-radius: 50%;
+}
+.nav-logo:hover {
+  cursor: pointer;
 }
 h1,
 h2,
@@ -295,7 +298,6 @@ a {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: 0.5 !important;
-  transform: translateX(0.5rem);
 }
 
 .main-card {
