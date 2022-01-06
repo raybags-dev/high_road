@@ -44,7 +44,7 @@ body {
   -ms-user-select: none;
   user-select: none;
   background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.1)),
-    url("/images/bg_imgs/bg1.jpeg") center/cover no-repeat fixed;
+    url("https://github.com/raybags-web-dev/image_base/blob/master/images/background/__5.jpg?raw=true") center/cover no-repeat fixed;
 }
 
 .skeleton-container {
